@@ -27,7 +27,7 @@ public class Console {
                 int operator = scan.nextInt();
                 if (operator == 5) {
                     break calculatorSelection;
-                }
+                    }
 
 
                     System.out.println("Please enter the first number. ");
@@ -37,7 +37,7 @@ public class Console {
                     double y = scan.nextDouble();
 
 
-                    switch (operator){
+                    switch (operator) {
 
                         case 1:
                             double answer = simpleCalc.getAddition(x, y);
@@ -57,16 +57,14 @@ public class Console {
                         case 4:
                             if (y == 0) {
                                 System.out.println(x + " / " + y + " = Undefined");
-                            }
-                            else {
+                            } else {
                                 answer = simpleCalc.getDivision(x, y);
                                 System.out.println(x + " / " + y + " = " + answer);
                             }
                             break;
+                        }
 
 
-
-                    }
 
                 }
 
