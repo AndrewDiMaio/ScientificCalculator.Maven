@@ -38,8 +38,8 @@ public class AdvancedCalc {
                     answer = x * (-1);
                 }else{
                     answer = 0;
-                return answer;
-        }
+                }
+            return answer;
 
     }
 }
