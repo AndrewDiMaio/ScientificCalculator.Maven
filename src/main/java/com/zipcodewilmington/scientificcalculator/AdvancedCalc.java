@@ -5,65 +5,35 @@ public class AdvancedCalc {
     double x;
     double y;
     double answer;
-    int operator;
 
     public void AdvancedCalc() {
-        /*Scanner scan = new Scanner(System.in);
-        System.out.println("Would you like to: " + "\n 1)" +
-                " x^2" + "\n 2) √x" + "\n 3) x^y" + "\n 4) Inverse" + "\n 5) Inverse Sign");
-        operator = scan.nextInt();
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Would you like to: " + "\n 1) x2)" + "\n 2) √x)" + "\n 3) x^y" + "\n 4) 1/x" + "\n 5) Invert");
 
-        System.out.println("Please enter the first number. ");
-        x = scan.nextDouble();
-
-        System.out.println("Please enter the second number");
-        y = scan.nextDouble();
-*/
-
-
-        public double getSquared[] {
+        public double getSquared(double x) {
                 answer = Math.pow(x,2);
                 return answer;
         }
 
-        public double getSquareRoot() {
+        public double getSquareRoot(double x) {
                 answer = Math.sqrt(x);
                 return answer;
         }
 
-        public double getExponent() {
+        public double getExponent(double x,double y) {
                 answer = Math.pow(x, y);
                 return answer;
         }
 
-        public double getInverse() {
+        public double getInverse(double x) {
                 answer = x/1;
                 return answer;
         }
 
-        public double getInvertSign() {
-                answer =x;
+        public double getInvertSign(double x) {
+                answer = x;
                 break;
         }
 
-        /*switch (operator) {
-            case 1:
-                answer = Math.pow(x, 2);
-                break;
-            case 2:
-                answer = Math.sqrt(x);
-                break;
-            case 3:
-                answer = Math.pow(x, y);
-                break;
-            case 4:
-                answer = x / 1;
-                break;
-            case 5:
-                answer = x;
-                break;
-
-
-        }*/
     }
 }
