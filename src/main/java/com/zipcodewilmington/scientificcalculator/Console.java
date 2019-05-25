@@ -7,26 +7,29 @@ import java.util.Scanner;
  */
 public class Console {
 
-    public static void print(String output, Object... args) {
-        System.out.printf(output, args);
-    }
+    public static void main(String[] args) {
+        MainMenu mainMenu = new MainMenu();
+        SimpleCalc simpleCalc = new SimpleCalc();
 
-    public static void println(String output, Object... args) {
-        print(output + "\n", args);
-    }
 
-    public static String getStringInput(String prompt) {
-        Scanner scanner = new Scanner(System.in);
-        println(prompt);
-        String userInput = scanner.nextLine();
-        return userInput;
-    }
+        int menuInput = 0;
 
-    public static Integer getIntegerInput(String prompt) {
-        return null;
-    }
+        while (menuInput != 4) {
+            Scanner scan= new Scanner(System.in);
 
-    public static Double getDoubleInput(String prompt) {
-        return null;
+
+            mainMenu.mainMenuDisplay();
+            System.out.println("Please choose the Calculator you would like to access.");
+            menuInput = scan.nextInt();
+
+            if (menuInput == 1){
+
+                simpleCalc.BasicCalc();
+            }
+            
+
+
+
+        }
     }
 }
