@@ -8,7 +8,7 @@ public class AdvancedCalc {
 
     public void AdvanCalc() {
         Scanner scan = new Scanner(System.in);
-        System.out.println("Would you like to: " + "\n 1) x2)" + "\n 2) √x)" + "\n 3) x^y" + "\n 4) 1/x" + "\n 5) Invert");
+        System.out.println("Would you like to: " + "\n 1) x^2)" + "\n 2) √x)" + "\n 3) x^y" + "\n 4) 1/x" + "\n 5) Invert");
         }
         public double getSquared(double x) {
                 answer = Math.pow(x,2);
