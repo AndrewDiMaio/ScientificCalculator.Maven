@@ -10,6 +10,7 @@ public class Console {
     public static void main(String[] args) {
         MainMenu mainMenu = new MainMenu();
         SimpleCalc simpleCalc = new SimpleCalc();
+        AdvancedCalc advancedCalc = new AdvancedCalc();
 
 
         int menuInput = 0;
@@ -64,6 +65,34 @@ public class Console {
                             break;
                         }
 
+
+
+                    if (menuInput == 2){
+                        advancedCalc.AdvancedCalc();
+                    operator = scan.nextInt();
+                    if (operator == 6) {
+                        break calculatorSelection;
+                    }
+                        if (operator == 3) {
+                            System.out.println("Please enter the first number. ");
+                            x = scan.nextDouble();
+
+                            System.out.println("Please enter the second number");
+                            y = scan.nextDouble();
+
+                            double answer = advancedCalc.getExponent(x, y);
+                            System.out.println(x + " to the power of " + y + " = " + answer);
+                        }
+                        else if (operator == 1){
+                            System.out.println("Please enter the first number. ");
+                            x = scan.nextDouble();
+
+                            double answer =
+
+
+
+                        }
+                }
 
 
                 }
