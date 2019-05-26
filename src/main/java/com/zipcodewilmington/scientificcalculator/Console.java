@@ -11,7 +11,7 @@ public class Console {
         MainMenu mainMenu = new MainMenu();
         SimpleCalc simpleCalc = new SimpleCalc();
         AdvancedCalc advancedCalc = new AdvancedCalc();
-
+        ScientificFunctions scientificFunctions = new ScientificFunctions();
 
         int menuInput = 0;
 
@@ -23,7 +23,9 @@ public class Console {
             System.out.println("Please choose the Calculator you would like to access.");
             menuInput = scan.nextInt();
 
-            calculatorSelection: if (menuInput == 1){
+            calculatorSelection: switch (menuInput){
+
+                case 1:
                 simpleCalc.BasicCalc();
                 int operator = scan.nextInt();
                 if (operator == 5) {
@@ -65,10 +67,10 @@ public class Console {
                             break;
                         }
 
+                break;
 
-
-                    if (menuInput == 2){
-                        advancedCalc.AdvancedCalc();
+                case 2:
+                    advancedCalc.AdvanCalc();
                     operator = scan.nextInt();
                     if (operator == 6) {
                         break calculatorSelection;
@@ -87,12 +89,84 @@ public class Console {
                             System.out.println("Please enter the first number. ");
                             x = scan.nextDouble();
 
-                            double answer =
+                            double answer = advancedCalc.getSquared(x);
+                            System.out.println(x + " squared is " + answer);
 
+                        } else if (operator == 2) {
+                            System.out.println("Please enter the first number. ");
+                            x = scan.nextDouble();
+
+                            double answer = advancedCalc.getSquareRoot(x);
+                            System.out.println("The square root of " + x + " is " + answer);
 
 
                         }
-                }
+                        else if (operator == 4){
+                            System.out.println("Please enter the first number. ");
+                            x = scan.nextDouble();
+
+                            double answer = advancedCalc.getInverse(x);
+                            System.out.println("The inverse of " + x + " is " + answer);
+
+
+                        }
+                        else if (operator == 5){
+                            System.out.println("Please enter the first number. ");
+                            x = scan.nextDouble();
+
+                            double answer = advancedCalc.getInvertSign(x);
+                            System.out.println("If you invert the sign of " + x + " is " + answer);
+
+                        }
+
+                 break;
+
+
+
+
+                case 3:
+                    scientificFunctions.ScientificCalc();
+                     operator = scan.nextInt();
+                    if (operator == 7) {
+                        break calculatorSelection;
+                        }
+                    System.out.println("Please enter the first number. ");
+                    x = scan.nextDouble();
+
+                    switch (operator) {
+
+                        case 1:
+                           double answer = scientificFunctions.getSin(x);
+                            System.out.println("The sine of " + x + " is " + answer);
+                            break;
+
+                        case 2:
+                            answer = scientificFunctions.getCos(x);
+                            System.out.println("The cosine of " + x + " is " + answer);
+                            break;
+
+                        case 3:
+                            answer = scientificFunctions.getTan(x);
+                            System.out.println("The tangent of " + x + " is " + answer);
+                            break;
+
+                        case 4:
+                            answer = scientificFunctions.getInverseSin(x);
+                            System.out.println("The inverse sine of " + x + " is " + answer);
+                            break;
+
+                        case 5:
+                            answer = scientificFunctions.getInverseCos(x);
+                            System.out.println("The inverse cosine of " + x + " is " + answer);
+                            break;
+
+                        case 6:
+                            answer = scientificFunctions.getInverseTan(x);
+                            System.out.println("The inverse tangent of " + x + " is " + answer);
+                            break;
+
+
+                    }
 
 
                 }
