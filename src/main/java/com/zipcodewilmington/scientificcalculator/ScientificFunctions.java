@@ -9,7 +9,7 @@ public class ScientificFunctions {
 
     public void ScientificCalc() {
         Scanner scan = new Scanner(System.in);
-        System.out.println("Would you like to: " + "\n 1) sin" + "\n 2) cos" + "\n 3) tan" + "\n 4) Inverse sin" + "\n 5) Inverse cos" + "\n 6) Inverse tan");
+        System.out.println("Would you like to: " + "\n 1) sin" + "\n 2) cos" + "\n 3) tan" + "\n 4) Inverse sin" + "\n 5) Inverse cos" + "\n 6) Inverse tan" + "\n 7) Exit");
     }
     public double getSin(double x) {
         answer = Math.sin(x);
